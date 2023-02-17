@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success">New Product</button>
+    </div>
+</div>
+<hr>
+<div class="row">n
+    <div class="col-xs-10">
+        <a href="#" class="list-group-item  clearfix" *ngFor="let product of products">
+            <div class="pull-left">
+                <h4 class="list-group-item-heading">{{product.name}}</h4>
+                <p class="list-group-item-text">{{product.discription}}</p>
+            </div>
+            <span class="label label-primary">{{product.price}}</span>
+            <span class="pull-right">
+                <div class="row">
+                    <img [src]="product.imagepath" alt="{{product.name}}" class="img-responsive" style="max-height:60px;">
+                    <span class="label label-default">{{product.brand}}</span>
+                </div>
+            </span>
+        </a>
+    </div>
+</div>
